@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>NaN · Not a Name</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<!-- fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- icons -->
+		<script
+			src="https://kit.fontawesome.com/1f28b64665.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body class="body">
+		<header class="header">
+		    <a href="./index.html">
+		      <img
+		        class="header__logo"
+		        src="./assets/images/logo-NaN-monster.png"
+		        alt="Logo NaN awesome profile cards"
+		        title="Ir a inicio"
+		      />
+		    </a>
+		  </header>
+		<main class="main">
+		  <section class="preview">
+  			<div class="preview__container">
+  				<button class="preview__reset js-reset">
+  					<i class="far fa-trash-alt"></i>Reset
+  				</button>
+  				<div class="preview__card">
+  					<div class="preview__card--text">
+  						<div class="preview__card--stick js-stick stick-border-cold">
+  							<h1
+  								class="js-preview-text js-preview-name preview__card--name name-cold"
+  							></h1>
+  							<h2 class="js-preview-text preview__card--job"></h2>
+  						</div>
+  					</div>
+  					<div
+  						class="preview__img-container profile__image js__profile-image"
+  					></div>
+  					<ul class="preview__contact">
+  						<li>
+  							<a class="js-preview-href icon-cold preview__contact--link" href="#" target="_blank">
+  								<i class="fas fa-mobile-alt"></i>
+  							</a>
+  						</li>
+  						<li>
+  							<a class="js-preview-href icon-cold preview__contact--link" href="#" target="_blank">
+  								<i class="far fa-envelope"></i>
+  							</a>
+  						</li>
+  						<li>
+  							<a class="js-preview-href icon-cold preview__contact--link" href="#" target="_blank">
+  								<i class="fab fa-linkedin-in"></i>
+  							</a>
+  						</li>
+  						<li>
+  							<a class="js-preview-href icon-cold preview__contact--link" href="#" target="_blank">
+  								<i class="fab fa-github-alt"></i>
+  							</a>
+  						</li>
+  					</ul>
+  				</div>
+  			</div>
+  		</section>
+
+		  <section class="forms">
+  		  <ul class="forms__list">
+  		    <li class="item">
+    		    <div class="js-header1 item__header">
+    		      <div class="item__header--title">
+    		        <i class="far fa-object-ungroup item__header--icon"></i>
+    		        <h2>Diseña</h2>
+    		      </div>
+    		      <i class="fas fa-angle-down js-arrow1"></i>
+    		    </div>
+    		    <div class="js-content1 collapsed item__content colours">
+    		      <h3 class="colours__title">Colores</h3>
+    		      <form class="colours__palettes">
+    		        <label for="palette1" class="palette-flex palette1">
+    		          <input
+    		            id="palette1"
+    		            type="radio"
+    		            value="1"
+    		            name="colours"
+    		            class="js-option1"
+    		            checked
+    		          />
+    		          <div class="palette1__colour1 colour-box"></div>
+    		          <div class="palette1__colour2 colour-box"></div>
+    		          <div class="palette1__colour3 colour-box"></div>
+    		        </label>
+    		        <label for="palette2" class="palette-flex palette2">
+    		          <input
+    		            id="palette2"
+    		            type="radio"
+    		            value="2"
+    		            name="colours"
+    		            class="js-option2"
+    		          />
+    		          <div class="palette2__colour1 colour-box"></div>
+    		          <div class="palette2__colour2 colour-box"></div>
+    		          <div class="palette2__colour3 colour-box"></div>
+    		        </label>
+    		        <label for="palette3" class="palette-flex palette3">
+    		          <input
+    		            id="palette3"
+    		            type="radio"
+    		            value="3"
+    		            name="colours"
+    		            class="js-option3"
+    		          />
+    		          <div class="palette3__colour1 colour-box"></div>
+    		          <div class="palette3__colour2 colour-box"></div>
+    		          <div class="palette3__colour3 colour-box"></div>
+    		        </label>
+    		      </form>
+    		    </div>
+    		  </li>
+
+  		    <li class="item">
+    		    <div class="js-header2 item__header">
+    		      <div class="item__header--title">
+    		        <i class="far fa-keyboard item__header--icon"></i>
+    		        <h2>Rellena</h2>
+    		      </div>
+    		      <i class="fas fa-angle-down js-arrow2"></i>
+    		    </div>
+    		    <form
+    		      class="js-form js-content2 collapsed item__content fill"
+    		      action="#"
+    		      method="POST"
+    		    >
+    		      <label for="name">Nombre completo</label>
+    		      <input
+    		        class="js-field fill__box"
+    		        id="name"
+    		        type="text"
+    		        placeholder="Ej: Sally Jill"
+    		        name="full-name"
+    		      />
+    		      <label for="job">Puesto</label>
+    		      <input
+    		        class="js-field fill__box"
+    		        id="job"
+    		        type="text"
+    		        placeholder="Ej: Front-end unicorn"
+    		        name="job"
+    		      />
+
+    		      <!-- // modificar el nombre del botón "añadir imagen" -->
+
+    		      <label for="photo">Imagen de perfil</label>
+    		      <div class="action">
+      		      <button
+      		        class="action__upload-btn js__profile-trigger"
+      		        type="button"
+      		      >
+      		        Añadir imagen
+      		      </button>
+      		      <input
+      		        type="file"
+      		        name=""
+      		        id="img-selector"
+      		        class="action__hiddenField js__profile-upload-btn"
+      		      />
+      		      <div class="profile">
+      		        <!-- <div
+      		          class="profile__image js__profile-image"
+      		          style="
+      		            background-image: url(https://via.placeholder.com/300x300/cccccc/666666/?text=IMAGE);
+      		          "
+      		        ></div> -->
+      		        <div
+      		          class="profile__preview js__profile-preview"
+      		        ></div>
+      		      </div>
+      		    </div>
+
+
+    		      <label for="phone">Teléfono</label>
+    		      <input
+    		        class="js-field fill__box"
+    		        id="phone"
+    		        type="tel"
+    		        placeholder="Ej: 555-55-55-55"
+    		        name="phone"
+    		      />
+    		      <label for="email">Email</label>
+    		      <input
+    		        class="js-field fill__box"
+    		        id="email"
+    		        type="email"
+    		        placeholder="Ej: sally-hill@gmail.com"
+    		        name="email"
+    		      />
+    		      <label for="linkedin">Linkedin</label>
+    		      <input
+    		        class="js-field fill__box"
+    		        id="linkedin"
+    		        type="text"
+    		        placeholder="Ej: linkedin.com/in/sally-hill"
+    		        name="linkedin"
+    		      />
+    		      <label for="github">Github</label>
+    		      <input
+    		        class="js-field fill__box"
+    		        id="github"
+    		        type="text"
+    		        placeholder="Ej: sally-hill"
+    		        name="github"
+    		      />
+    		    </form>
+    		  </li>
+
+  		    <li class="item">
+    		    <div class="js-header3 item__header">
+    		      <div class="item__header--title">
+    		        <i class="fas fa-share-alt item__header--icon"></i>
+    		        <h2>Comparte</h2>
+    		      </div>
+    		      <i class="fas fa-angle-down js-arrow3"></i>
+    		    </div>
+    		    <form class="js-content3 collapsed item__content share js-share" action="">
+    		      <i class="far fa-id-card share__icon"></i>
+    		      <input class="js-submit share__text" type="button" value="Crear Tarjeta" />
+    		    </form>
+    		  </li>
+
+    		  <div class="share-url js-share-url hidden">
+    		    <div class="share-url__container">
+    		      <h3 class="share-url__title">La tarjeta ha sido creada:</h3>
+    		      <a class="js-response share-url__link" target="_blank" href="#"></a>
+    		      <!-- <a class="share-url__link--share" target="_blank" href="https://twitter.com/Adalab_Digital"
+    		        ><i class="fab fa-twitter share-url__link--twitter"></i>Compartir en
+    		        twitter</a
+    		      > -->
+    		    </div>
+    		  </div>
+
+  		  </ul>
+  		</section>
+
+		</main>
+
+		<footer class="footer">
+		  <div class="footer__copyright">
+		    <img
+		      class="footer__copyright--icon"
+		      src="./assets/images/icon-NaN-monster.png"
+		      alt="Logo de NaN · Not a Name"
+		      title="NaN · Not a Name"
+		    />
+		    <div class="footer__copyright--text">
+		      <p>NaN · Not a Name &#64;2020</p>
+		      <p>Awesome profile-cards</p>
+		    </div>
+		  </div>
+		  <div>
+		    <a href="https://adalab.es/" title="Ir a Adalab">
+		      <img class="footer__logo" src="./assets/images/logo-adalab.png" alt="Logo Adalab" />
+		    </a>
+		  </div>
+		</footer>
+
+
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
