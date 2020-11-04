@@ -1,4 +1,5 @@
 import React from "react";
+import "./Header.scss";
 import logo from "../images/logo-NaN-monster.png";
 
 class Header extends React.Component {
