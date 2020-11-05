@@ -33,7 +33,9 @@ class FormShare extends React.Component {
               target="_blank"
               rel="noreferrer"
               href="enlace"
-            ></a>
+            >
+            Aquí aparecerá un enlace
+            </a>
             <a
               className="share-url__link--share"
               target="_blank"
