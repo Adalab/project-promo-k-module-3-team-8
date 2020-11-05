@@ -1,5 +1,6 @@
 import React from 'react';
 import './Preview.scss';
+import LinkTemplate from './LinkTemplate';
 
 class Preview extends React.Component {
   render() {

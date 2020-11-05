@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import InputTemplate from './InputTemplate';
+import InputImage from './InputImage';
 
 class FormFill extends React.Component {
   render() {
@@ -16,56 +18,48 @@ class FormFill extends React.Component {
           action="#"
           method="POST"
         >
-          <label for="name">Nombre completo</label>
-          <input
-            className="js-field fill__box"
+          <InputTemplate
+            title="Nombre completo"
             id="name"
-            type="text"
             placeholder="Ej: Sally Jill"
             name="full-name"
           />
-          <label for="job">Puesto</label>
-          <input
-            className="js-field fill__box"
+
+          <InputTemplate
+            title="Puesto"
             id="job"
-            type="text"
             placeholder="Ej: Front-end unicorn"
             name="job"
           />
-          {/* modificar el nombre del botón "añadir imagen" */}
 
-          <label for="photo">Imagen de perfil</label>
-          <include src="./image-components.html"></include>
+          <InputImage title="Añadir Imagen" id="img-selector" />
 
-          <label for="phone">Teléfono</label>
-          <input
-            className="js-field fill__box"
+          <InputTemplate
+            title="Teléfono"
             id="phone"
             type="tel"
             placeholder="Ej: 555-55-55-55"
             name="phone"
           />
-          <label for="email">Email</label>
-          <input
-            className="js-field fill__box"
+
+          <InputTemplate
+            title="Email"
             id="email"
             type="email"
             placeholder="Ej: sally-hill@gmail.com"
             name="email"
           />
-          <label for="linkedin">Linkedin</label>
-          <input
-            className="js-field fill__box"
+
+          <InputTemplate
+            title="Linkedin"
             id="linkedin"
-            type="text"
             placeholder="Ej: linkedin.com/in/sally-hill"
             name="linkedin"
           />
-          <label for="github">Github</label>
-          <input
-            className="js-field fill__box"
+
+          <InputTemplate
+            title="Github"
             id="github"
-            type="text"
             placeholder="Ej: sally-hill"
             name="github"
           />
