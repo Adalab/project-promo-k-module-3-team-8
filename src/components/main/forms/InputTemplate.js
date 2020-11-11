@@ -9,7 +9,7 @@ class InputTemplate extends React.Component {
       <>
         <label htmlFor={this.props.id}>{this.props.title}</label>
         <input
-          className='js-field fill__box'
+          className="js-field fill__box"
           id={this.props.id}
           type={this.props.type}
           placeholder={this.props.placeholder}
