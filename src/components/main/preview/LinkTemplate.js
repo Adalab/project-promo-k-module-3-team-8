@@ -1,17 +1,15 @@
-import React from 'react';
+import React from "react";
 
 class LinkTemplate extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <>
         <li>
           <a
-            className='js-preview-href icon-cold preview__contact--link'
+            className="js-preview-href icon-cold preview__contact--link"
             href={this.props.link}
-            target='_blank'
+            target="_blank"
+            rel="noreferrer"
           >
             <i className={this.props.class}></i>
           </a>
@@ -22,7 +20,7 @@ class LinkTemplate extends React.Component {
 }
 
 LinkTemplate.defaultProps = {
-  href: 'enlace',
+  href: "#",
 };
 
 export default LinkTemplate;
