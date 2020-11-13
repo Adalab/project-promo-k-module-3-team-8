@@ -14,7 +14,7 @@ class Forms extends React.Component {
             <FormDesign />
           </Collapsable>
           <Collapsable title="Rellena" icon="far fa-keyboard" colourClass="">
-            <FormFill />
+            <FormFill handleInput={this.props.handleInput} />
           </Collapsable>
           <Collapsable title="Comparte" icon="fas fa-share-alt" colourClass="">
             <FormShare />

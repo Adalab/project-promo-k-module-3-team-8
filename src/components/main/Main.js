@@ -1,14 +1,14 @@
-import React from 'react';
-import Preview from './preview/Preview';
-import Forms from './forms/Forms';
-import './Main.scss';
+import React from "react";
+import Preview from "./preview/Preview";
+import Forms from "./forms/Forms";
+import "./Main.scss";
 
 class Main extends React.Component {
   render() {
     return (
       <main className="main">
-        <Preview />
-        <Forms />
+        <Preview data={this.props.data} />
+        <Forms handleInput={this.props.handleInput} />
       </main>
     );
   }
