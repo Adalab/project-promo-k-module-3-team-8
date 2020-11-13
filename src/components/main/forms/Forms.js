@@ -11,7 +11,7 @@ class Forms extends React.Component {
       <section className="forms">
         <ul className="forms__list">
           <Collapsable title="Diseña" icon="far fa-object-ungroup" colourClass="colours">
-            <FormDesign />
+            <FormDesign handlePalette={this.props.handlePalette} />
           </Collapsable>
           <Collapsable title="Rellena" icon="far fa-keyboard" colourClass="">
             <FormFill handleInput={this.props.handleInput} />

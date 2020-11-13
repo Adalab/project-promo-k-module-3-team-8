@@ -14,19 +14,26 @@ class App extends React.Component {
       email: "",
       linkedin: "",
       github: "",
+      palette: 1,
     };
     this.handleInput = this.handleInput.bind(this);
+    this.handlePalette = this.handlePalette.bind(this);
   }
   handleInput(ev) {
     this.setState({
       [ev.currentTarget.id]: ev.currentTarget.value,
     });
   }
+  handlePalette(ev) {
+    this.setState({
+      palette: ev.currentTarget.value,
+    });
+  }
   render() {
     return (
       <>
         <Header />
-        <Main handleInput={this.handleInput} data={this.state} />
+        <Main handlePalette={this.handlePalette} handleInput={this.handleInput} data={this.state} />
         <Footer />
       </>
     );

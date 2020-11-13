@@ -8,7 +8,7 @@ class Main extends React.Component {
     return (
       <main className="main">
         <Preview data={this.props.data} />
-        <Forms handleInput={this.props.handleInput} />
+        <Forms handlePalette={this.props.handlePalette} handleInput={this.props.handleInput} />
       </main>
     );
   }
