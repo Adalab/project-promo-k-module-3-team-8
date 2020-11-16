@@ -7,17 +7,25 @@ class FormFill extends React.Component {
     return (
       <form className="js-form fill item__content" action="#" method="POST">
         <InputTemplate
+          handleInput={this.props.handleInput}
           title="Nombre completo"
           id="name"
           placeholder="Ej: Sally Jill"
-          name="full-name"
+          name="name"
         />
 
-        <InputTemplate title="Puesto" id="job" placeholder="Ej: Front-end unicorn" name="job" />
+        <InputTemplate
+          handleInput={this.props.handleInput}
+          title="Puesto"
+          id="job"
+          placeholder="Ej: Front-end unicorn"
+          name="job"
+        />
 
         <InputImage title="Añadir Imagen" id="img-selector" />
 
         <InputTemplate
+          handleInput={this.props.handleInput}
           title="Teléfono"
           id="phone"
           type="tel"
@@ -26,6 +34,7 @@ class FormFill extends React.Component {
         />
 
         <InputTemplate
+          handleInput={this.props.handleInput}
           title="Email"
           id="email"
           type="email"
@@ -34,13 +43,20 @@ class FormFill extends React.Component {
         />
 
         <InputTemplate
+          handleInput={this.props.handleInput}
           title="Linkedin"
           id="linkedin"
           placeholder="Ej: linkedin.com/in/sally-hill"
           name="linkedin"
         />
 
-        <InputTemplate title="Github" id="github" placeholder="Ej: sally-hill" name="github" />
+        <InputTemplate
+          handleInput={this.props.handleInput}
+          title="Github"
+          id="github"
+          placeholder="Ej: sally-hill"
+          name="github"
+        />
       </form>
     );
   }

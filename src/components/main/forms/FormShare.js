@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class FormShare extends React.Component {
   render() {
@@ -31,7 +31,7 @@ class FormShare extends React.Component {
               href="https://twitter.com/Adalab_Digital"
             >
               <i className="fab fa-twitter share-url__link--twitter"></i>
-              Compartir en twitter{" "}
+              Compartir en twitter{' '}
             </a>
           </div>
         </div>

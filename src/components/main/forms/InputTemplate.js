@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class InputTemplate extends React.Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class InputTemplate extends React.Component {
           type={this.props.type}
           placeholder={this.props.placeholder}
           name={this.props.name}
+          onKeyUp={this.props.handleInput}
         />
       </>
     );
@@ -21,7 +22,7 @@ class InputTemplate extends React.Component {
 }
 
 InputTemplate.defaultProps = {
-  type: 'text',
+  type: "text",
 };
 
 export default InputTemplate;
