@@ -1,9 +1,9 @@
 import React from 'react';
 
 class InputImage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <>
@@ -12,6 +12,7 @@ class InputImage extends React.Component {
           <button
             className='action__upload-btn js__profile-trigger'
             type='button'
+            onClick={this.props.fakeClick}
           >
             Añadir imagen
           </button>
@@ -20,9 +21,11 @@ class InputImage extends React.Component {
             name=''
             id={this.props.id}
             className='action__hiddenField js__profile-upload-btn'
+            ref={this.props.fileInput} 
+            onChange={this.props.handleFileChange}
           />
           <div className='profile'>
-            <div className='profile__preview js__profile-preview'></div>
+            <div className='profile__preview js__profile-preview' style={{backgroundImage: `url(${this.props.data.fileUrl})` }}></div>
           </div>
         </div>
       </>
