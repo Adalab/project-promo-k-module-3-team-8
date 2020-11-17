@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class FormDesign extends React.Component {
   render() {
@@ -13,7 +14,6 @@ class FormDesign extends React.Component {
               type="radio"
               value="1"
               name="colours"
-              className="js-option1"
             />
             <div className="palette1__colour1 colour-box"></div>
             <div className="palette1__colour2 colour-box"></div>
@@ -26,7 +26,6 @@ class FormDesign extends React.Component {
               type="radio"
               value="2"
               name="colours"
-              className="js-option2"
             />
             <div className="palette2__colour1 colour-box"></div>
             <div className="palette2__colour2 colour-box"></div>
@@ -39,7 +38,6 @@ class FormDesign extends React.Component {
               type="radio"
               value="3"
               name="colours"
-              className="js-option3"
             />
             <div className="palette3__colour1 colour-box"></div>
             <div className="palette3__colour2 colour-box"></div>
@@ -50,5 +48,9 @@ class FormDesign extends React.Component {
     );
   }
 }
+
+FormDesign.propTypes = {
+  handlePalette: PropTypes.func,
+};
 
 export default FormDesign;

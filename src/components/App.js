@@ -18,7 +18,7 @@ class App extends React.Component {
       linkedin: "",
       github: "",
       palette: 1,
-      fileUrl: ''
+      fileUrl: "",
     };
     this.handleInput = this.handleInput.bind(this);
     this.handlePalette = this.handlePalette.bind(this);
@@ -27,8 +27,8 @@ class App extends React.Component {
     this.handleFileChange = this.handleFileChange.bind(this);
     this.writeImage = this.writeImage.bind(this);
   }
-  
-  fakeClick(){
+
+  fakeClick() {
     console.log(this.fileInput);
     this.fileInput.current.click();
   }
@@ -36,17 +36,16 @@ class App extends React.Component {
   writeImage() {
     const url = fr.result;
     this.setState({
-      fileUrl: url
+      fileUrl: url,
     });
   }
 
   handleFileChange(ev) {
     const myFile = ev.currentTarget.files[0];
-    
-    fr.addEventListener('load', this.writeImage);
+
+    fr.addEventListener("load", this.writeImage);
     fr.readAsDataURL(myFile);
   }
-
 
   handleInput(ev) {
     this.setState({
@@ -68,6 +67,7 @@ class App extends React.Component {
       linkedin: "",
       github: "",
       palette: 1,
+      fileUrl: "",
     });
   }
 
@@ -75,7 +75,16 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Main handlePalette={this.handlePalette} handleInput={this.handleInput} data={this.state} handleReset={this.handleReset} fakeClick={this.fakeClick} writeImage={this.writeImage} handleFileChange={this.handleFileChange} fileInput={this.fileInput} />
+        <Main
+          handlePalette={this.handlePalette}
+          handleInput={this.handleInput}
+          data={this.state}
+          handleReset={this.handleReset}
+          fakeClick={this.fakeClick}
+          writeImage={this.writeImage}
+          handleFileChange={this.handleFileChange}
+          fileInput={this.fileInput}
+        />
         <Footer />
       </>
     );
