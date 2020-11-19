@@ -1,5 +1,5 @@
 /**** Estilos aplicados en HTML de FORMS ****/
-@import '../../../stylesheets/core/variables';
+@import "../../../stylesheets/core/variables";
 
 .forms {
   background-image: linear-gradient(to bottom, $color-bg-main, $color-base 9%);
@@ -84,7 +84,14 @@
     display: none;
   }
 }
+.turn {
+  transition: transform 0.2s;
+  transform: rotate(180deg);
+}
 
+.arrow {
+  transition: transform 0.2s;
+}
 /**** Estilos aplicados en sección DISEÑA ****/
 
 .colours {
@@ -117,6 +124,22 @@
     margin: 7px 0 20px 0;
     &:last-child {
       margin-bottom: 0;
+    }
+    &::-webkit-input-placeholder {
+      color: #c5c5c5;
+      padding-left: 9px;
+    }
+    &::-moz-placeholder {
+      color: #c5c5c5;
+      padding-left: 9px;
+    }
+    &:-ms-input-placeholder {
+      color: #c5c5c5;
+      padding-left: 9px;
+    }
+    &::-ms-input-placeholder {
+      color: #c5c5c5;
+      padding-left: 9px;
     }
     &::placeholder {
       color: #c5c5c5;
