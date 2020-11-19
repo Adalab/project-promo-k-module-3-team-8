@@ -22,7 +22,7 @@ class FormFill extends React.Component {
           name="job"
         />
 
-        <InputImage title="Añadir Imagen" id="img-selector" />
+        <InputImage title="Añadir Imagen" id="img-selector" data={this.props.data} handleFileChange={this.props.handleFileChange} fakeClick={this.props.fakeClick} writeImage={this.props.writeImage} fileInput={this.props.fileInput} />
 
         <InputTemplate
           handleInput={this.props.handleInput}
