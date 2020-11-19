@@ -69,6 +69,7 @@ class CardGenerator extends React.Component {
       palette: 1,
       fileUrl: '',
     });
+    localStorage.clear();
   }
 
   componentDidUpdate() {
