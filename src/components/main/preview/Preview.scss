@@ -1,8 +1,9 @@
-@import "../../../stylesheets/core/variables";
+@import '../../../stylesheets/core/variables';
 
 .preview {
   width: 100vw;
-  height: 460px;
+  padding: 30px 0;
+  height: auto;
   background-image: url(../../../images/bg-eyes-NaN-monster.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -12,12 +13,11 @@
   justify-content: center;
   @media all and (min-width: 768px) {
     width: calc(100% - 400px);
-    height: calc(100vh - 232px);
+    height: calc(100vh - 77px - 116px - 40px);
     border-radius: 6px;
     margin-left: 10px;
   }
   @media all and (min-width: 1024px) {
-    height: 100vh;
     background-image: url(../../../images/bg-eyes-NaN-monster.jpg);
   }
 
