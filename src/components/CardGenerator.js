@@ -71,6 +71,15 @@ class CardGenerator extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    localStorage.setItem('data', JSON.stringify(this.state));
+  }
+
+  componentDidMount() {
+    const lastData = JSON.parse(localStorage.getItem('data'));
+    this.setState(lastData);
+  }
+
   render() {
     return (
       <>
