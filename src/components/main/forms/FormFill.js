@@ -1,11 +1,12 @@
 import React from "react";
 import InputTemplate from "./InputTemplate";
 import InputImage from "./InputImage";
+import PropTypes from "prop-types";
 
 class FormFill extends React.Component {
   render() {
     return (
-      <form className="js-form fill item__content" action="#" method="POST">
+      <form className="fill item__content" action="#" method="POST">
         <InputTemplate
           handleInput={this.props.handleInput}
           title="Nombre completo"
@@ -22,7 +23,15 @@ class FormFill extends React.Component {
           name="job"
         />
 
-        <InputImage title="Añadir Imagen" id="img-selector" data={this.props.data} handleFileChange={this.props.handleFileChange} fakeClick={this.props.fakeClick} writeImage={this.props.writeImage} fileInput={this.props.fileInput} />
+        <InputImage
+          title="Añadir Imagen"
+          id="img-selector"
+          data={this.props.data}
+          handleFileChange={this.props.handleFileChange}
+          fakeClick={this.props.fakeClick}
+          writeImage={this.props.writeImage}
+          fileInput={this.props.fileInput}
+        />
 
         <InputTemplate
           handleInput={this.props.handleInput}
@@ -61,5 +70,14 @@ class FormFill extends React.Component {
     );
   }
 }
+
+FormFill.propTypes = {
+  data: PropTypes.object.isRequired,
+  fakeClick: PropTypes.func.isRequired,
+  writeImage: PropTypes.func.isRequired,
+  fileInput: PropTypes.func.isRequired,
+  handleFileChange: PropTypes.func.isRequired,
+  handleInput: PropTypes.func.isRequired,
+};
 
 export default FormFill;

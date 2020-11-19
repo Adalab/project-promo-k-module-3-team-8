@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class LinkTemplate extends React.Component {
   render() {
@@ -6,7 +7,7 @@ class LinkTemplate extends React.Component {
       <>
         <li>
           <a
-            className="js-preview-href icon-cold preview__contact--link"
+            className={` icon-${this.props.palette} preview__contact--link`}
             href={this.props.link}
             target="_blank"
             rel="noreferrer"
@@ -18,6 +19,11 @@ class LinkTemplate extends React.Component {
     );
   }
 }
+
+LinkTemplate.propTypes = {
+  palette: PropTypes.string.isRequired,
+  class: PropTypes.string.isRequired,
+};
 
 LinkTemplate.defaultProps = {
   href: "#",
