@@ -1,5 +1,6 @@
 import React from "react";
 import "./Forms.scss";
+import PropTypes from "prop-types";
 
 class Collapsable extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Collapsable extends React.Component {
 
   render() {
     const openClassName = this.state.isOpen ? "" : "collapsed";
+    const openArrow = this.state.isOpen ? "" : "turn";
     return (
       <li className="item">
         <div onClick={this.handleCollapse} className="item__header">
@@ -25,13 +27,23 @@ class Collapsable extends React.Component {
             <i className={this.props.icon + " item__header--icon"}></i>
             <h2>{this.props.title}</h2>
           </div>
-          <i className="fas fa-angle-down js-arrow1"></i>
+          <i className={openArrow + " fas fa-angle-down arrow"}></i>
         </div>
-        <div className={openClassName + " item__content " + this.props.colourClass}>
+        <div
+          className={openClassName + " item__content " + this.props.colourClass}
+        >
           {this.props.children}
         </div>
       </li>
     );
   }
 }
+
+Collapsable.propTypes = {
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  colourClass: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+};
+
 export default Collapsable;

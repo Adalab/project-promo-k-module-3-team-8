@@ -2,7 +2,8 @@
 
 .preview {
   width: 100vw;
-  height: 460px;
+  padding: 30px 0;
+  height: auto;
   background-image: url(../../../images/bg-eyes-NaN-monster.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -12,12 +13,11 @@
   justify-content: center;
   @media all and (min-width: 768px) {
     width: calc(100% - 400px);
-    height: calc(100vh - 232px);
+    height: calc(100vh - 77px - 116px - 40px);
     border-radius: 6px;
     margin-left: 10px;
   }
   @media all and (min-width: 1024px) {
-    height: 100vh;
     background-image: url(../../../images/bg-eyes-NaN-monster.jpg);
   }
 
@@ -67,13 +67,13 @@
       display: flex;
       flex-direction: column;
     }
-    .stick-border-cold {
+    .stick-border-1 {
       border-left: 5px solid $color-cold-two;
     }
-    .stick-border-warm {
+    .stick-border-2 {
       border-left: 5px solid $color-warm-two;
     }
-    .stick-border-mild {
+    .stick-border-3 {
       border-left: 5px solid $color-mild-two;
     }
     &--name {
@@ -82,13 +82,13 @@
       font-size: 18px;
       font-weight: 800;
     }
-    .name-cold {
+    .name-1 {
       color: $color-cold-one;
     }
-    .name-warm {
+    .name-2 {
       color: $color-warm-one;
     }
-    .name-mild {
+    .name-3 {
       color: $color-mild-one;
     }
 
@@ -117,15 +117,15 @@
       align-items: center;
       text-decoration: none;
     }
-    .icon-cold {
+    .icon-1 {
       border: 2px solid $color-cold-three;
       color: $color-cold-one;
     }
-    .icon-warm {
+    .icon-2 {
       border: 2px solid $color-warm-three;
       color: $color-warm-one;
     }
-    .icon-mild {
+    .icon-3 {
       border: 2px solid $color-mild-three;
       color: $color-mild-one;
     }
