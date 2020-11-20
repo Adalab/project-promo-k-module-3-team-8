@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Main from './main/Main';
 import Footer from './Footer';
+import apiCall from '../services/fetch';
 
 const fr = new FileReader();
 
@@ -19,6 +20,9 @@ class CardGenerator extends React.Component {
       github: '',
       palette: 1,
       fileUrl: '',
+      apiSuccess: false,
+      apiCardUrl: '',
+      apiError: '',
     };
     this.handleInput = this.handleInput.bind(this);
     this.handlePalette = this.handlePalette.bind(this);
@@ -26,6 +30,35 @@ class CardGenerator extends React.Component {
     this.fakeClick = this.fakeClick.bind(this);
     this.handleFileChange = this.handleFileChange.bind(this);
     this.writeImage = this.writeImage.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
+  }
+  sendRequest() {
+    const apiData = {
+      name: this.state.name,
+      job: this.state.job,
+      phone: this.state.phone,
+      email: this.state.email,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      palette: this.state.palette,
+      photo: this.state.fileUrl,
+    };
+    apiCall(apiData).then((response) => {
+      if (response.success === true) {
+        this.setState({
+          apiSuccess: true,
+          apiCardUrl: response.cardURL,
+          apiError: '',
+        });
+        console.log(this.state.apiCardUrl);
+      } else {
+        this.setState({
+          apiSuccess: false,
+          apiCardUrl: '',
+          apiError: response.error,
+        });
+      }
+    });
   }
 
   fakeClick() {
@@ -68,6 +101,9 @@ class CardGenerator extends React.Component {
       github: '',
       palette: 1,
       fileUrl: '',
+      apiSuccess: false,
+      apiCardUrl: '',
+      apiError: '',
     });
     localStorage.clear();
   }
@@ -94,6 +130,7 @@ class CardGenerator extends React.Component {
           writeImage={this.writeImage}
           handleFileChange={this.handleFileChange}
           fileInput={this.fileInput}
+          sendRequest={this.sendRequest}
         />
         <Footer />
       </>

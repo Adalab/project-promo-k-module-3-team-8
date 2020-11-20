@@ -1,13 +1,13 @@
-import React from "react";
-import Preview from "./preview/Preview";
-import Forms from "./forms/Forms";
-import "./Main.scss";
-import PropTypes from "prop-types";
+import React from 'react';
+import Preview from './preview/Preview';
+import Forms from './forms/Forms';
+import './Main.scss';
+import PropTypes from 'prop-types';
 
 class Main extends React.Component {
   render() {
     return (
-      <main className="main">
+      <main className='main'>
         <Preview data={this.props.data} handleReset={this.props.handleReset} />
         <Forms
           data={this.props.data}
@@ -17,6 +17,7 @@ class Main extends React.Component {
           fakeClick={this.props.fakeClick}
           writeImage={this.props.writeImage}
           fileInput={this.props.fileInput}
+          sendRequest={this.props.sendRequest}
         />
       </main>
     );
@@ -30,7 +31,7 @@ Main.propTypes = {
   handleFileChange: PropTypes.func.isRequired,
   fakeClick: PropTypes.func.isRequired,
   writeImage: PropTypes.func.isRequired,
-  fileInput: PropTypes.func.isRequired,
+  fileInput: PropTypes.object.isRequired,
 };
 
 export default Main;
