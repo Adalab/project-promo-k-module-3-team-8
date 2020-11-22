@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Main from './main/Main';
 import Footer from './Footer';
-import apiCall from '../services/Fetch';
+import apiCall from '../services/fetch';
 
 const fr = new FileReader();
 
@@ -62,7 +62,6 @@ class CardGenerator extends React.Component {
   }
 
   fakeClick() {
-    console.log(this.fileInput);
     this.fileInput.current.click();
   }
 
