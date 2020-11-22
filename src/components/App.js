@@ -6,10 +6,10 @@ import Landing from './Landing';
 function App() {
   return (
     <Switch>
-      <Route exact path='/'>
+      <Route exact path="/">
         <Landing />
       </Route>
-      <Route path='/cardgenerator' component={CardGenerator} />
+      <Route path="/cardgenerator" component={CardGenerator} />
     </Switch>
   );
 }

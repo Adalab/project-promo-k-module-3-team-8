@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Main from './main/Main';
 import Footer from './Footer';
-import apiCall from '../services/fetch';
+import apiCall from '../services/Fetch';
 
 const fr = new FileReader();
 
