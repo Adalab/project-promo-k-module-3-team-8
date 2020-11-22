@@ -1,9 +1,9 @@
-import "../stylesheets/App.scss";
-import React from "react";
-import Header from "./Header";
-import Main from "./main/Main";
-import Footer from "./Footer";
-import apiCall from "../services/fetch";
+import '../stylesheets/App.scss';
+import React from 'react';
+import Header from './Header';
+import Main from './main/Main';
+import Footer from './Footer';
+import apiCall from '../services/fetch';
 
 const fr = new FileReader();
 
@@ -12,17 +12,17 @@ class CardGenerator extends React.Component {
     super();
     this.fileInput = React.createRef();
     this.state = {
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
       palette: 1,
-      fileUrl: "",
+      fileUrl: '',
       apiSuccess: false,
-      apiCardUrl: "",
-      apiError: "",
+      apiCardUrl: '',
+      apiError: '',
     };
     this.handleInput = this.handleInput.bind(this);
     this.handlePalette = this.handlePalette.bind(this);
@@ -48,13 +48,13 @@ class CardGenerator extends React.Component {
         this.setState({
           apiSuccess: true,
           apiCardUrl: response.cardURL,
-          apiError: "",
+          apiError: '',
         });
         console.log(this.state.apiCardUrl);
       } else {
         this.setState({
           apiSuccess: false,
-          apiCardUrl: "",
+          apiCardUrl: '',
           apiError: response.error,
         });
       }
@@ -75,7 +75,7 @@ class CardGenerator extends React.Component {
   handleFileChange(ev) {
     const myFile = ev.currentTarget.files[0];
 
-    fr.addEventListener("load", this.writeImage);
+    fr.addEventListener('load', this.writeImage);
     fr.readAsDataURL(myFile);
   }
 
@@ -92,27 +92,27 @@ class CardGenerator extends React.Component {
 
   handleReset() {
     this.setState({
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
       palette: 1,
-      fileUrl: "",
+      fileUrl: '',
       apiSuccess: false,
-      apiCardUrl: "",
-      apiError: "",
+      apiCardUrl: '',
+      apiError: '',
     });
     localStorage.clear();
   }
 
   componentDidUpdate() {
-    localStorage.setItem("data", JSON.stringify(this.state));
+    localStorage.setItem('data', JSON.stringify(this.state));
   }
 
   componentDidMount() {
-    const lastData = JSON.parse(localStorage.getItem("data"));
+    const lastData = JSON.parse(localStorage.getItem('data'));
     this.setState(lastData);
   }
 
