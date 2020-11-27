@@ -1,6 +1,28 @@
-@import '../stylesheets/core/variables';
-@import '../stylesheets/core/reset';
+@import "../stylesheets/core/variables";
+@import "../stylesheets/core/reset";
 
+@keyframes eye {
+  0% {
+    transform: translate(0, -40px);
+  }
+  50% {
+    transform: translate(27px, -55px);
+  }
+  100% {
+    transform: translate(0, -40px);
+  }
+}
+@keyframes eye2 {
+  0% {
+    transform: translate(-5px, -40px);
+  }
+  50% {
+    transform: translate(-15px, -70px);
+  }
+  100% {
+    transform: translate(-5px, -40px);
+  }
+}
 .landing {
   width: 100vw;
   height: 100vh;
@@ -8,7 +30,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  &__eye {
+    transform: translate(50px, 50px);
+    align-self: flex-start;
+    width: 70px;
+    height: 70px;
+    border: 5px solid $color-second;
+    border-radius: 50%;
+    &--point {
+      animation: eye 3s linear infinite;
+      font-size: 150px;
+      transform: translate(0, -80px);
+    }
+  }
+  &__eye2 {
+    transform: translate(400px, 0);
+    align-self: flex-start;
+    width: 70px;
+    height: 70px;
+    border: 5px solid $color-second;
+    border-radius: 50%;
+    &--point {
+      border-radius: 50%;
+      padding: 0;
+      animation: eye2 3s linear infinite;
+      font-size: 150px;
+      transform: translate(-10px, -20px);
+    }
+  }
   &__main {
     width: 268px;
     height: 100%;
@@ -95,6 +144,8 @@
     text-transform: uppercase;
     color: $color-base;
     margin: 38px 0 30px;
+    transition: ease 1s;
+    border: 2px solid $color-cuaternary;
     @media all and (min-width: 768px) {
       position: absolute;
       bottom: 100px;
@@ -104,8 +155,8 @@
       }
     }
     &:hover {
-      cursor: pointer;
-      background-color: #3999a8;
+      color: $color-main;
+      background-color: white;
       font-weight: bold;
     }
   }
