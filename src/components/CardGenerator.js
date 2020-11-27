@@ -23,6 +23,7 @@ class CardGenerator extends React.Component {
       apiSuccess: false,
       apiCardUrl: "",
       apiError: "",
+      isLoading: false,
     };
     this.handleInput = this.handleInput.bind(this);
     this.handlePalette = this.handlePalette.bind(this);
@@ -44,11 +45,15 @@ class CardGenerator extends React.Component {
       photo: this.state.fileUrl,
     };
     apiCall(apiData).then((response) => {
+      this.setState({
+        isLoading: true,
+      });
       if (response.success === true) {
         this.setState({
           apiSuccess: true,
           apiCardUrl: response.cardURL,
           apiError: "",
+          isLoading: false,
         });
         console.log(this.state.apiCardUrl);
       } else {
@@ -103,6 +108,7 @@ class CardGenerator extends React.Component {
       apiSuccess: false,
       apiCardUrl: "",
       apiError: "",
+      isLoading: false,
     });
     localStorage.clear();
   }

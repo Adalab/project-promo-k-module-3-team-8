@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./Loader";
 
 class FormShare extends React.Component {
   render() {
@@ -31,6 +32,7 @@ class FormShare extends React.Component {
                 ? this.props.data.apiCardUrl
                 : this.props.data.apiError}
             </a>
+            <div>{this.props.data.isLoading === true ? <Loader /> : null}</div>
             <a
               className="share-url__link--share"
               target="_blank"
